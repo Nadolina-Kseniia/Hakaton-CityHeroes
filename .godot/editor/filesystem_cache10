@@ -1,28 +1,29 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1746297836
-camera.gd::GDScript::5030317899395634740::1746297668::0::1::::<>Camera3D<><>0<>0<><>::
-export_presets.cfg::TextFile/TextFile::-1::1746288589::0::1::::<><><>0<>0<><>::
+::res://::1746300926
+camera.gd::GDScript::5030317899395634740::1746299078::0::1::::<>Camera3D<><>0<>0<><>::
+export_presets.cfg::TextFile/TextFile::-1::1746299241::0::1::::<><><>0<>0<><>::
 general_skeleton.gd::GDScript/GDScript::5885072810958174437::1746265846::0::1::::<>Skeleton3D<><>0<>0<><>::
 icon.webp::CompressedTexture2D/CompressedTexture2D::27118964165343846::1745849147::1746203472::1::::<><><>0<>0<>2765b228073266418cb0e013965e5088<>res://.godot/imported/icon.webp-e94f9a68b0f625a567a797079e4d325f.ctex::
-Main.gd::GDScript::8123949213996832648::1746286633::0::1::::<>Node<><>0<>0<><>::
-Main.tscn::PackedScene::1946344858681233962::1746297596::0::1::::<><><>0<>0<><>::uid://dn0kiywu3mkq7::::res://Main.gd<>uid://dw3yuvle8wp6u::::res://Player.tscn<>uid://ha0ar5s2c3m4::::res://Mob.tscn<>uid://deg14wlh2xae6::::res://art/Floor-tiles.jpg<>uid://cqquurjk1i7yw::::res://ui_theme.tres<>uid://bja88ppekpfv1::::res://TouchScreenJoystick-e434cf717218fb67c664f8cf9db55b250aed03ef/scripts/touch_screen_joystick.gd<>uid://ofhvwth8plpb::::res://ScoreLabel.gd<>uid://b4tn8n4xglngx::::res://retry.gd<>uid://cdwyuoumy6ssq::::res://camera.gd<>uid://beh7s5g1e8l78::::res://art/Mini-market/wall.glb<>uid://cbhtn7eddh8ue::::res://art/Mini-market/wall-window.glb<>uid://cao8m23j5jhj0::::res://art/Mini-market/wall-door-rotate.glb<>uid://s7ldh3dx22r1::::res://art/Mini-market/wall-corner.glb
+Main.gd::GDScript::8123949213996832648::1746300924::0::1::::<>Node<><>0<>0<><>::
+Main.tscn::PackedScene::1946344858681233962::1746300926::0::1::::<><><>0<>0<><>::uid://dn0kiywu3mkq7::::res://Main.gd<>uid://dw3yuvle8wp6u::::res://Player.tscn<>uid://ha0ar5s2c3m4::::res://Mob.tscn<>uid://deg14wlh2xae6::::res://art/Floor-tiles.jpg<>uid://cqquurjk1i7yw::::res://ui_theme.tres<>uid://bja88ppekpfv1::::res://TouchScreenJoystick-e434cf717218fb67c664f8cf9db55b250aed03ef/scripts/touch_screen_joystick.gd<>uid://ofhvwth8plpb::::res://ScoreLabel.gd<>uid://b4tn8n4xglngx::::res://retry.gd<>uid://cdwyuoumy6ssq::::res://camera.gd<>uid://beh7s5g1e8l78::::res://art/Mini-market/wall.glb<>uid://cbhtn7eddh8ue::::res://art/Mini-market/wall-window.glb<>uid://cao8m23j5jhj0::::res://art/Mini-market/wall-door-rotate.glb<>uid://s7ldh3dx22r1::::res://art/Mini-market/wall-corner.glb
 Mob.gd::GDScript/GDScript::7291350454852087858::1745849147::0::1::::<>CharacterBody3D<><>0<>0<><>::
 Mob.tscn::PackedScene/PackedScene::492840770380503333::1745849147::0::1::::<><><>0<>0<><>::uid://db48qhcxd4usg::::res://Mob.gd<>uid://bicorb7we351t::::res://art/mob.glb
 MusicPlayer.tscn::PackedScene/PackedScene::716687642126613565::1745849147::0::1::::<><><>0<>0<><>::uid://c5qpnfga41t4p::::res://art/House In a Forest Loop.ogg
-Player.gd::GDScript::9001394967907948641::1746297386::0::1::::<>CharacterBody3D<><>0<>0<><>::
-Player.tscn::PackedScene::8762713232144107886::1746297596::0::1::::<><><>0<>0<><>::uid://d1ilwo7xlp834::::res://Player.gd<>uid://d0ypm0v45pwdv::::res://art/player.glb<>uid://dfi17spg4tr7w::::res://art/player_0.png<>uid://d11i5idejp8cv::::res://art/chicken_with_animation_1.res<>uid://cqqy6q4c5xigr::::res://art/chicken_with_animation_2.res
+Player.gd::GDScript::9001394967907948641::1746298299::0::1::::<>CharacterBody3D<><>0<>0<><>::
+Player.tscn::PackedScene::8762713232144107886::1746300926::0::1::::<><><>0<>0<><>::uid://d1ilwo7xlp834::::res://Player.gd<>uid://d0ypm0v45pwdv::::res://art/player.glb<>uid://dfi17spg4tr7w::::res://art/player_0.png<>uid://d11i5idejp8cv::::res://art/chicken_with_animation_1.res<>uid://cqqy6q4c5xigr::::res://art/chicken_with_animation_2.res
 README.md::TextFile/TextFile::-1::1745849147::0::1::::<><><>0<>0<><>::
 retry.gd::GDScript::4461969307284361839::1746285173::0::1::::<>ColorRect<><>0<>0<><>::
 ScoreLabel.gd::GDScript/GDScript::993429405551857235::1745849147::0::1::::<>Label<><>0<>0<><>::
 spring_arm_3d.gd::GDScript/GDScript::1690799444962698082::1746290726::0::1::::<>SpringArm3D<><>0<>0<><>::
 ui_theme.tres::Theme/Theme::5930143872682747302::1745849147::0::1::::<><><>0<>0<><>::uid://cyxhh7ddkn62q::::res://fonts/Montserrat-Medium.ttf
-::res://art/::1746295458
+::res://art/::1746302041
 body.tres::StandardMaterial3D/StandardMaterial3D::-1::1745849147::0::1::::<><><>0<>0<><>::
 chicken_with_animation_1.res::Animation/Animation::9038385542048588837::1746265463::0::1::::<><><>0<>0<><>::
 chicken_with_animation_2.res::Animation/Animation::5930406362401928341::1746265463::0::1::::<><><>0<>0<><>::
 Ellipse 1.png::CompressedTexture2D/CompressedTexture2D::2747076645481211923::1746271076::1746271076::1::::<><><>0<>0<>428cb4daa851f465966912e918f58a63<>res://.godot/imported/Ellipse 1.png-d2e82c55d7501bb9fccaffe249e826db.ctex::
 Ellipse 2.png::CompressedTexture2D/CompressedTexture2D::8087893354676277642::1746271076::1746271076::1::::<><><>0<>0<>cd56604dd42e64eb33c933a539f3733e<>res://.godot/imported/Ellipse 2.png-16fb11482c54e94ba17947fb63213bd1.ctex::
 eye.tres::StandardMaterial3D/StandardMaterial3D::-1::1745849147::0::1::::<><><>0<>0<><>::
+Fast Run.fbx::PackedScene::483381351580184891::1746302039::1746302242::1::::<><><>0<>0<>d5e4496be6bc1cb45e4af86103ae65d0<>res://.godot/imported/Fast Run.fbx-983fb877ee2d553d935a102f7fe4054a.scn::uid://0ptwu3elsa7j::::res://art/Fast Run_0.png<>uid://nji48a7qotg0::::res://art/Fast Run_2.png<>uid://dw8vtx783p0g::::res://art/Fast Run_1.png
 Floor-tiles.jpg::CompressedTexture2D/CompressedTexture2D::7454035294852546351::1746289884::1746289923::1::::<><><>0<>0<>b7fc067bd5fe2fa0b2560a2ec110483a<>res://.godot/imported/Floor-tiles.jpg-94ce881f1a4318f16fca153dda35caed.s3tc.ctex<*>res://.godot/imported/Floor-tiles.jpg-94ce881f1a4318f16fca153dda35caed.etc2.ctex::
 House In a Forest Loop.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::6912470962729766485::1745849147::1746203472::1::::<><><>0<>0<>ca11219f684f6cd2af90d4e6cdaead58<>res://.godot/imported/House In a Forest Loop.ogg-1a6a72ae843ad792b7039931227e8d50.oggvorbisstr::
 mob.glb::PackedScene/PackedScene::2952940687663745631::1745849147::1746203473::1::::<><><>0<>0<>a780a1250ec97030b0168a6a0460c3f3<>res://.godot/imported/mob.glb-3afb43c03b9d1598b6af5154e2543eac.scn::
@@ -31,6 +32,9 @@ mob_eye.tres::StandardMaterial3D/StandardMaterial3D::-1::1745849147::0::1::::<><
 player.glb::PackedScene/PackedScene::8964461739428881931::1746205479::1746265463::1::::<><><>0<>0<>786e91dbaaf37bf1f0fe7c28322687dd<>res://.godot/imported/player.glb-08dcfb373480a049995065542e37637b.scn::uid://dfi17spg4tr7w::::res://art/player_0.png<>uid://dnkaikwl03h37::::res://art/RESET.res<>uid://d11i5idejp8cv::::res://art/chicken_with_animation_1.res<>uid://cqqy6q4c5xigr::::res://art/chicken_with_animation_2.res
 player_0.png::CompressedTexture2D/CompressedTexture2D::7528358047423330690::1746205463::1746276660::1::::<><><>0<>0<>d141a8af8edfe3b354c4ec40809aa0d9<>res://.godot/imported/player_0.png-df136502e5545e4c5cc09729a3f4c98d.s3tc.ctex<*>res://.godot/imported/player_0.png-df136502e5545e4c5cc09729a3f4c98d.etc2.ctex::
 pupil.tres::StandardMaterial3D/StandardMaterial3D::-1::1745849147::0::1::::<><><>0<>0<><>::
+Fast Run_0.png::CompressedTexture2D::1786880761508853257::1746302040::1746302041::1::::<><><>0<>0<>9da5337129248011d1d0421e433882b0<>res://.godot/imported/Fast Run_0.png-03851d9a2b5b73f9e077af6d163991dd.s3tc.ctex<*>res://.godot/imported/Fast Run_0.png-03851d9a2b5b73f9e077af6d163991dd.etc2.ctex::
+Fast Run_1.png::CompressedTexture2D::258025038910014020::1746302040::1746302041::1::::<><><>0<>0<>3ed0959dfe4f5122c95abadb685693cb<>res://.godot/imported/Fast Run_1.png-17d9e3f5c2237c91fbdb7c0f06d248c1.s3tc.ctex<*>res://.godot/imported/Fast Run_1.png-17d9e3f5c2237c91fbdb7c0f06d248c1.etc2.ctex::
+Fast Run_2.png::CompressedTexture2D::931573625792774817::1746302040::1746302041::1::::<><><>0<>0<>c8260093e25f1546ec320dbee65e4441<>res://.godot/imported/Fast Run_2.png-82a541e6fe20bcc1f7d06a621b6f8156.s3tc.ctex<*>res://.godot/imported/Fast Run_2.png-82a541e6fe20bcc1f7d06a621b6f8156.etc2.ctex::
 RESET.res::Animation/Animation::8092375642019067332::1746265463::0::1::::<><><>0<>0<><>::
 ::res://art/Building/::1746295480
 barricade-doorway-a.glb::PackedScene/PackedScene::866646052267590802::1746295448::1746295475::1::::<><><>0<>0<>ef267901b8446b62f9d570f4c0f2d252<>res://.godot/imported/barricade-doorway-a.glb-362ec4bebabbc7bbcd01ec53a852b39b.scn::uid://dql5xcbfco8q::::res://art/Building/Textures/colormap.png
@@ -355,7 +359,7 @@ player.tscn::PackedScene/PackedScene::632298327936862464::1746280689::0::1::::<>
 Screenshot_20250120_055038.jpg::CompressedTexture2D/CompressedTexture2D::445234957758319103::1746280689::1746280690::1::::<><><>0<>0<>7eecbcb5db2b3f0fa49c8dcea7aea89e<>res://.godot/imported/Screenshot_20250120_055038.jpg-c9050ebf2742d65550362d9a0bcf0e6a.ctex::
 ::res://TouchScreenJoystick-e434cf717218fb67c664f8cf9db55b250aed03ef/scripts/::1746281206
 basic_player.gd::GDScript/GDScript::7944717877534405119::1746280689::0::1::::<>CharacterBody2D<><>0<>0<><>::
-touch_screen_joystick.gd::GDScript/GDScript::3020183679613566928::1746281206::0::1::::TouchScreenJoystick<>Control<>res://touchscreenjoystickicon.png<>0<>1<><>::
+touch_screen_joystick.gd::GDScript/GDScript::3020183679613566928::1746281206::0::1::::TouchScreenJoystick<>Control<><>0<>1<><>::
 ::res://TouchScreenJoystick-e434cf717218fb67c664f8cf9db55b250aed03ef/textures/::1746280689
 ::res://TouchScreenJoystick-e434cf717218fb67c664f8cf9db55b250aed03ef/textures/VirtualJoystickPack/::1746280690
 Joystick.png::CompressedTexture2D/CompressedTexture2D::714529316991251687::1746280689::1746280690::1::::<><><>0<>0<>011a4139b39f04d755c45e2a036e4054<>res://.godot/imported/Joystick.png-438ef61dfb330b9a8ff1146459f7c889.ctex::

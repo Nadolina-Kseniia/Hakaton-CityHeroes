@@ -29,11 +29,20 @@ func _safe_reload_scene():
 	get_tree().reload_current_scene()
 
 # Остальные функции остаются без изменений
+var min_spawn_distance = 15.0  # Минимальное расстояние от игрока
+var spawn_radius = 20.0  # Радиус спавна
+
 func _on_mob_timer_timeout():
+	$MobTimer.wait_time = randf_range(0, 2.0)
 	var mob = mob_scene.instantiate()
-	var mob_spawn_location = get_node("SpawnPath/SpawnLocation")
-	mob_spawn_location.progress_ratio = randf()
-	mob.initialize(mob_spawn_location.position, $Player.position)
+	var player_pos = $Player.global_position
+	
+	# Генерируем случайную точку на окружности вокруг игрока
+	var angle = randf() * 2 * PI
+	var distance = randf_range(min_spawn_distance, spawn_radius)
+	var spawn_pos = player_pos + Vector3(cos(angle) * distance, 0, sin(angle) * distance)
+	
+	mob.initialize(spawn_pos, player_pos)
 	add_child(mob)
 	mob.squashed.connect($UserInterface/ScoreLabel._on_Mob_squashed)
 

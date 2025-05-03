@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://2y3ar4s86yra"]
+[gd_scene load_steps=22 format=3 uid="uid://2y3ar4s86yra"]
 
 [ext_resource type="Script" uid="uid://dn0kiywu3mkq7" path="res://Main.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dw3yuvle8wp6u" path="res://Player.tscn" id="2"]
@@ -37,14 +37,6 @@ sky_material = SubResource("ProceduralSkyMaterial_m3njk")
 [sub_resource type="Environment" id="Environment_0tcge"]
 sky = SubResource("Sky_yutuu")
 tonemap_mode = 4
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cr5ed"]
-albedo_color = Color(0.635294, 0.211765, 0.0235294, 1)
-
-[sub_resource type="CylinderMesh" id="3"]
-material = SubResource("StandardMaterial3D_cr5ed")
-radial_segments = 24
-rings = 1
 
 [sub_resource type="Curve3D" id="5"]
 _data = {
@@ -192,7 +184,7 @@ transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 
 
 [node name="Camera" type="Camera3D" parent="." node_paths=PackedStringArray("player")]
 transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, -14.9669, 21.0157, 14.3947)
-fov = 68.9
+fov = 72.5
 size = 60.2228
 near = 0.01
 far = 300.0
@@ -201,26 +193,6 @@ player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("2")]
 unique_name_in_owner = true
-
-[node name="Cylinders" type="Node3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 8, 0, 0)
-visible = false
-
-[node name="MeshInstance" type="MeshInstance3D" parent="Cylinders"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -15)
-mesh = SubResource("3")
-
-[node name="MeshInstance3" type="MeshInstance3D" parent="Cylinders"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 1, -15)
-mesh = SubResource("3")
-
-[node name="MeshInstance2" type="MeshInstance3D" parent="Cylinders"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 1, 16)
-mesh = SubResource("3")
-
-[node name="MeshInstance4" type="MeshInstance3D" parent="Cylinders"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 16)
-mesh = SubResource("3")
 
 [node name="SpawnPath" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -301,8 +273,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "Press Space or Enter to retry"
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

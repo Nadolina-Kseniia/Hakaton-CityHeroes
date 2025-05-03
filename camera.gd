@@ -4,7 +4,7 @@ extends Camera3D
 @export var player : CharacterBody3D  # Только тип, без присваивания
 
 # 2. Настройки камеры
-@export var camera_offset = Vector3(-15, 60, 50)
+@export var camera_offset = Vector3(-5, 25, 15)
 @export var follow_speed = 5.0
 
 func _ready():
