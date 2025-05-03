@@ -1,6 +1,4 @@
 res://Main.tscn
-res://retry.gd
+res://camera.gd
 res://Player.tscn
-res://TouchScreenJoystick-e434cf717218fb67c664f8cf9db55b250aed03ef/scenes/main.tscn
-res://Main.gd
 res://Player.gd

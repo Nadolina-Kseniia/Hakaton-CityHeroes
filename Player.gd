@@ -15,7 +15,7 @@ var was_on_floor = true
 func _ready():
 	# Загружаем текстуру один раз
 	var texture = load("res://art/player_0.png")
-	
+	add_to_group("player")
 	# Создаем общий материал
 	var shared_material = StandardMaterial3D.new()
 	shared_material.albedo_texture = texture
@@ -24,6 +24,7 @@ func _ready():
 	
 	# Применяем к обоим мешам
 	apply_material_to_all_meshes(shared_material)
+	
 
 func apply_material_to_all_meshes(material: StandardMaterial3D):
 	var skeleton = $GeneralSkeleton
