@@ -11,6 +11,27 @@ signal hit
 var is_moving = false
 var was_on_floor = true
 
+
+func _ready():
+	var skeleton = $GeneralSkeleton
+	var model = $GeneralSkeleton/Character  # Путь к вашей модели
+	
+	# Привязываем модель к скелету
+	if model is Node3D:
+		var mesh_instance = MeshInstance3D.new()
+		mesh_instance.mesh = load("res://path_to_your_mesh.mesh")
+		skeleton.add_child(mesh_instance)
+		mesh_instance.skin = Skin.new()
+		mesh_instance.skeleton = skeleton.get_path()
+		
+		# Настройка материала
+		var material = StandardMaterial3D.new()
+		material.albedo_texture = load("res://textures/player_texture.png")
+		mesh_instance.material_override = material
+		
+		# Удаляем старую модель
+		model.queue_free()
+
 func _physics_process(delta):
 	# Управление движением
 	var direction = Vector3.ZERO
