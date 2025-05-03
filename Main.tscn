@@ -1,10 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://2y3ar4s86yra"]
+[gd_scene load_steps=17 format=3 uid="uid://2y3ar4s86yra"]
 
 [ext_resource type="Script" uid="uid://dn0kiywu3mkq7" path="res://Main.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dw3yuvle8wp6u" path="res://Player.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://ha0ar5s2c3m4" path="res://Mob.tscn" id="3"]
 [ext_resource type="Theme" uid="uid://cqquurjk1i7yw" path="res://ui_theme.tres" id="4_gnyca"]
 [ext_resource type="Script" uid="uid://ofhvwth8plpb" path="res://ScoreLabel.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://bfex7lmbcna00" path="res://art/Ellipse 1.png" id="6_lgr22"]
+[ext_resource type="Texture2D" uid="uid://dnh3olygfoc87" path="res://art/Ellipse 2.png" id="7_trn2v"]
 
 [sub_resource type="BoxShape3D" id="1"]
 size = Vector3(60, 2, 60)
@@ -160,6 +162,28 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "Score: 0"
 script = ExtResource("6")
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface"]
+clip_contents = true
+layout_mode = 0
+offset_left = 263.0
+offset_top = 1233.0
+offset_right = 483.0
+offset_bottom = 1453.0
+texture = ExtResource("6_lgr22")
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 70.0
+offset_top = 70.0
+offset_right = -70.0
+offset_bottom = -70.0
+texture = ExtResource("7_trn2v")
+expand_mode = 2
 
 [node name="Retry" type="ColorRect" parent="UserInterface"]
 visible = false

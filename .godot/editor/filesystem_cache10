@@ -1,20 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1746265481
+::res://::1746270178
 icon.webp::CompressedTexture2D/CompressedTexture2D::27118964165343846::1745849147::1746203472::1::::<><><>0<>0<>2765b228073266418cb0e013965e5088<>res://.godot/imported/icon.webp-e94f9a68b0f625a567a797079e4d325f.ctex::
 Main.gd::GDScript/GDScript::8123949213996832648::1746257757::0::1::::<>Node<><>0<>0<><>::
-Main.tscn::PackedScene::1946344858681233962::1746265463::0::1::::<><><>0<>0<><>::uid://dn0kiywu3mkq7::::res://Main.gd<>uid://dw3yuvle8wp6u::::res://Player.tscn<>uid://ha0ar5s2c3m4::::res://Mob.tscn<>uid://cqquurjk1i7yw::::res://ui_theme.tres<>uid://ofhvwth8plpb::::res://ScoreLabel.gd
+Main.tscn::PackedScene::1946344858681233962::1746270178::0::1::::<><><>0<>0<><>::uid://dn0kiywu3mkq7::::res://Main.gd<>uid://dw3yuvle8wp6u::::res://Player.tscn<>uid://ha0ar5s2c3m4::::res://Mob.tscn<>uid://cqquurjk1i7yw::::res://ui_theme.tres<>uid://ofhvwth8plpb::::res://ScoreLabel.gd
 Mob.gd::GDScript/GDScript::7291350454852087858::1745849147::0::1::::<>CharacterBody3D<><>0<>0<><>::
 Mob.tscn::PackedScene/PackedScene::492840770380503333::1745849147::0::1::::<><><>0<>0<><>::uid://db48qhcxd4usg::::res://Mob.gd<>uid://bicorb7we351t::::res://art/mob.glb
 MusicPlayer.tscn::PackedScene/PackedScene::716687642126613565::1745849147::0::1::::<><><>0<>0<><>::uid://c5qpnfga41t4p::::res://art/House In a Forest Loop.ogg
-Player.gd::GDScript::9001394967907948641::1746265085::0::1::::<>CharacterBody3D<><>0<>0<><>::
-Player.tscn::PackedScene::8762713232144107886::1746265463::0::1::::<><><>0<>0<><>::uid://d1ilwo7xlp834::::res://Player.gd<>uid://d0ypm0v45pwdv::::res://art/player.glb<>uid://dfi17spg4tr7w::::res://art/player_0.png<>uid://d11i5idejp8cv::::res://art/chicken_with_animation_1.res<>uid://cqqy6q4c5xigr::::res://art/chicken_with_animation_2.res
+Player.gd::GDScript::9001394967907948641::1746267119::0::1::::<>CharacterBody3D<><>0<>0<><>::
+Player.tscn::PackedScene::8762713232144107886::1746270178::0::1::::<><><>0<>0<><>::uid://d1ilwo7xlp834::::res://Player.gd<>uid://d0ypm0v45pwdv::::res://art/player.glb<>uid://dfi17spg4tr7w::::res://art/player_0.png<>uid://d11i5idejp8cv::::res://art/chicken_with_animation_1.res<>uid://cqqy6q4c5xigr::::res://art/chicken_with_animation_2.res
 README.md::TextFile/TextFile::-1::1745849147::0::1::::<><><>0<>0<><>::
+general_skeleton.gd::GDScript::5885072810958174437::1746265846::0::1::::<>Skeleton3D<><>0<>0<><>::
 ScoreLabel.gd::GDScript/GDScript::993429405551857235::1745849147::0::1::::<>Label<><>0<>0<><>::
 ui_theme.tres::Theme/Theme::5930143872682747302::1745849147::0::1::::<><><>0<>0<><>::uid://cyxhh7ddkn62q::::res://fonts/Montserrat-Medium.ttf
-::res://art/::1746265463
+::res://art/::1746271076
 body.tres::StandardMaterial3D/StandardMaterial3D::-1::1745849147::0::1::::<><><>0<>0<><>::
 chicken_with_animation_1.res::Animation::9038385542048588837::1746265463::0::1::::<><><>0<>0<><>::
 chicken_with_animation_2.res::Animation::5930406362401928341::1746265463::0::1::::<><><>0<>0<><>::
+Ellipse 1.png::CompressedTexture2D::2747076645481211923::1746271076::1746271076::1::::<><><>0<>0<>428cb4daa851f465966912e918f58a63<>res://.godot/imported/Ellipse 1.png-d2e82c55d7501bb9fccaffe249e826db.ctex::
+Ellipse 2.png::CompressedTexture2D::8087893354676277642::1746271076::1746271076::1::::<><><>0<>0<>cd56604dd42e64eb33c933a539f3733e<>res://.godot/imported/Ellipse 2.png-16fb11482c54e94ba17947fb63213bd1.ctex::
 eye.tres::StandardMaterial3D/StandardMaterial3D::-1::1745849147::0::1::::<><><>0<>0<><>::
 House In a Forest Loop.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::6912470962729766485::1745849147::1746203472::1::::<><><>0<>0<>ca11219f684f6cd2af90d4e6cdaead58<>res://.godot/imported/House In a Forest Loop.ogg-1a6a72ae843ad792b7039931227e8d50.oggvorbisstr::
 mob.glb::PackedScene/PackedScene::2952940687663745631::1745849147::1746203473::1::::<><><>0<>0<>a780a1250ec97030b0168a6a0460c3f3<>res://.godot/imported/mob.glb-3afb43c03b9d1598b6af5154e2543eac.scn::
