@@ -1,23 +1,23 @@
-[gd_scene load_steps=15 format=4 uid="uid://ha0ar5s2c3m4"]
+[gd_scene load_steps=16 format=4 uid="uid://ccxrfv6ywjemh"]
 
-[ext_resource type="Script" uid="uid://db48qhcxd4usg" path="res://Mob.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://0ptwu3elsa7j" path="res://art/Fast Run_0.png" id="2_gguu4"]
-[ext_resource type="Texture2D" uid="uid://nji48a7qotg0" path="res://art/Fast Run_2.png" id="3_wpg5f"]
-[ext_resource type="Texture2D" uid="uid://dw8vtx783p0g" path="res://art/Fast Run_1.png" id="4_5bhu7"]
+[ext_resource type="Script" uid="uid://c2eli51pvvnkf" path="res://chaser_mob.gd" id="1_bix7l"]
+[ext_resource type="Texture2D" uid="uid://0ptwu3elsa7j" path="res://art/Fast Run_0.png" id="2_j46n1"]
+[ext_resource type="Texture2D" uid="uid://nji48a7qotg0" path="res://art/Fast Run_2.png" id="3_malvr"]
+[ext_resource type="Texture2D" uid="uid://dw8vtx783p0g" path="res://art/Fast Run_1.png" id="4_df2vt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d7w4p"]
 resource_name = "peter_damagemat"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("2_gguu4")
+albedo_texture = ExtResource("2_j46n1")
 emission_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_px2jb"]
 resource_name = "peter_texturemat"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("3_wpg5f")
+albedo_texture = ExtResource("3_malvr")
 emission_enabled = true
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ejbti"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_3oqjo"]
 resource_name = "peter_eyelidsmesh"
 _surfaces = [{
 "aabb": AABB(-0.00131071, 0.0168826, 0.0025378, 0.00111065, 0.00115079, 0.00077269),
@@ -52,7 +52,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="Skin" id="Skin_ch7wj"]
+[sub_resource type="Skin" id="Skin_siqva"]
 resource_name = "Skin"
 bind_count = 1
 bind/0/name = &"mixamorig_Head"
@@ -62,10 +62,10 @@ bind/0/pose = Transform3D(1, 0, 0, 0, 1, -1.38778e-17, 0, 1.38778e-17, 1, 2.7000
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fi7wd"]
 resource_name = "peter_mouthmat"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_5bhu7")
+albedo_texture = ExtResource("4_df2vt")
 emission_enabled = true
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_x4v8o"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ltvoa"]
 resource_name = "peter_griffinmesh"
 _surfaces = [{
 "aabb": AABB(-0.00949779, 0.00125576, -0.00450272, 0.0189951, 0.0156154, 0.00993681),
@@ -114,7 +114,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="Skin" id="Skin_w71a0"]
+[sub_resource type="Skin" id="Skin_ih2lk"]
 resource_name = "Skin2"
 bind_count = 46
 bind/0/name = &"mixamorig_Head"
@@ -256,7 +256,7 @@ bind/45/name = &"mixamorig_RightHandRing3"
 bind/45/bone = -1
 bind/45/pose = Transform3D(-0.118158, 0.00565068, 0.992979, -0.961477, -0.250591, -0.112983, 0.248193, -0.968077, 0.0350423, -0.000552918, -0.00861869, 0.0153797)
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_gguu4"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_reu4d"]
 height = 5.78052
 radius = 1.94092
 
@@ -599,11 +599,11 @@ _data = {
 &"mixamo_com": SubResource("Animation_ay6pp")
 }
 
-[node name="Mob" type="CharacterBody3D" groups=["mob"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0114588, 0)
-collision_layer = 7
-collision_mask = 2147483655
-script = ExtResource("1")
+[sub_resource type="SphereShape3D" id="SphereShape3D_57evg"]
+radius = 50.0
+
+[node name="ChaserMob" type="CharacterBody3D"]
+script = ExtResource("1_bix7l")
 
 [node name="Skeleton3D" type="Skeleton3D" parent="."]
 transform = Transform3D(-300, 0, -2.62268e-05, 0, 300, 0, 2.62268e-05, 0, -300, 0, 0, 0)
@@ -1008,24 +1008,25 @@ bones/56/rotation = Quaternion(2.01497e-10, -1.45066e-16, 1.38778e-17, 1)
 bones/56/scale = Vector3(1, 1, 1)
 
 [node name="peter_eyelids" type="MeshInstance3D" parent="Skeleton3D"]
-mesh = SubResource("ArrayMesh_ejbti")
-skin = SubResource("Skin_ch7wj")
+mesh = SubResource("ArrayMesh_3oqjo")
+skin = SubResource("Skin_siqva")
 
 [node name="peter_griffin" type="MeshInstance3D" parent="Skeleton3D"]
-mesh = SubResource("ArrayMesh_x4v8o")
-skin = SubResource("Skin_w71a0")
+mesh = SubResource("ArrayMesh_ltvoa")
+skin = SubResource("Skin_ih2lk")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0793234, 2.53025, -0.329236)
-shape = SubResource("CylinderShape3D_gguu4")
-
-[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.062134, 0.331645)
-aabb = AABB(-1.19986, 0.251327, -1.57098, 2.41047, 1.09305, 3.17223)
+shape = SubResource("CylinderShape3D_reu4d")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_kiso5")
 }
 
-[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_screen_exited"]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="DetectionArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea"]
+shape = SubResource("SphereShape3D_57evg")

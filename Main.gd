@@ -7,6 +7,13 @@ func _ready():
 	$UserInterface/Retry.hide()
 	# Обработка ввода только здесь
 	$UserInterface/Retry.gui_input.connect(_on_retry_input)
+	var mob_scene = load("res://chaser_mob.tscn")
+	if mob_scene == null:
+		print("ОШИБКА: Не удалось загрузить сцену chaser_mob.tscn!")
+		return
+	
+	await get_tree().create_timer(1.0).timeout
+	spawn_chaser_mob()
 
 func _on_retry_input(event: InputEvent):
 	if reload_cooldown or not $UserInterface/Retry.visible:
@@ -45,6 +52,19 @@ func _on_mob_timer_timeout():
 	mob.initialize(spawn_pos, player_pos)
 	add_child(mob)
 	mob.squashed.connect($UserInterface/ScoreLabel._on_Mob_squashed)
+
+
+func spawn_chaser_mob():
+	var mob = load("res://chaser_mob.tscn").instantiate()
+	# Спавн в случайной точке вокруг игрока
+	var spawn_pos = Vector3(
+		randf_range(-10, 10),
+		0,
+		randf_range(-10, 10))
+	mob.position = spawn_pos
+	add_child(mob)
+	print("Моб заспавнен на позиции: ", spawn_pos)
+
 
 func _on_player_hit():
 	$MobTimer.stop()

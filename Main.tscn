@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://2y3ar4s86yra"]
+[gd_scene load_steps=26 format=3 uid="uid://2y3ar4s86yra"]
 
 [ext_resource type="Script" uid="uid://dn0kiywu3mkq7" path="res://Main.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dw3yuvle8wp6u" path="res://Player.tscn" id="2"]
@@ -7,12 +7,19 @@
 [ext_resource type="Theme" uid="uid://cqquurjk1i7yw" path="res://ui_theme.tres" id="4_gnyca"]
 [ext_resource type="Script" uid="uid://bja88ppekpfv1" path="res://TouchScreenJoystick-e434cf717218fb67c664f8cf9db55b250aed03ef/scripts/touch_screen_joystick.gd" id="5_3dxm6"]
 [ext_resource type="Script" uid="uid://ofhvwth8plpb" path="res://ScoreLabel.gd" id="6"]
+[ext_resource type="PackedScene" uid="uid://d18nmxgfgfapy" path="res://art/Mini-market/column.glb" id="7_c2ibq"]
 [ext_resource type="Script" uid="uid://b4tn8n4xglngx" path="res://retry.gd" id="7_lgr22"]
 [ext_resource type="Script" uid="uid://cdwyuoumy6ssq" path="res://camera.gd" id="8_c2ibq"]
 [ext_resource type="PackedScene" uid="uid://beh7s5g1e8l78" path="res://art/Mini-market/wall.glb" id="10_c6i3y"]
 [ext_resource type="PackedScene" uid="uid://cbhtn7eddh8ue" path="res://art/Mini-market/wall-window.glb" id="11_c2ibq"]
 [ext_resource type="PackedScene" uid="uid://cao8m23j5jhj0" path="res://art/Mini-market/wall-door-rotate.glb" id="12_j4qnp"]
 [ext_resource type="PackedScene" uid="uid://s7ldh3dx22r1" path="res://art/Mini-market/wall-corner.glb" id="13_fpfj3"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c2ibq"]
+radius = 0.3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c2ibq"]
+size = Vector3(60.4358, 5, 5.17053)
 
 [sub_resource type="BoxShape3D" id="1"]
 size = Vector3(180, 2, 180)
@@ -44,6 +51,8 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
 point_count = 5
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_c2ibq"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1")
@@ -125,6 +134,65 @@ transform = Transform3D(-4.37114e-07, 0, -10, 0, 10, 0, 10, 0, -4.37114e-07, 57.
 
 [node name="wall18" parent="Level" instance=ExtResource("10_c6i3y")]
 transform = Transform3D(-4.37114e-07, 0, -10, 0, 10, 0, 10, 0, -4.37114e-07, 57.015, 0, 54.9262)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -30.604, 0, -12.073)
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D"]
+shape = SubResource("CylinderShape3D_c2ibq")
+
+[node name="column2" parent="Level/StaticBody3D" instance=ExtResource("7_c2ibq")]
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Level"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -12.073)
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D2"]
+shape = SubResource("CylinderShape3D_c2ibq")
+
+[node name="column2" parent="Level/StaticBody3D2" instance=ExtResource("7_c2ibq")]
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Level"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 28.6951, 0, -12.073)
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D3"]
+shape = SubResource("CylinderShape3D_c2ibq")
+
+[node name="column2" parent="Level/StaticBody3D3" instance=ExtResource("7_c2ibq")]
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="Level"]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.233963, 0, -12.163)
+shape = SubResource("BoxShape3D_c2ibq")
+
+[node name="wall20" parent="Level/StaticBody3D4" instance=ExtResource("10_c6i3y")]
+transform = Transform3D(10, 0, 0, 0, -5, 0, 0, 0, 10, -25.556, 5, -12.073)
+
+[node name="wall21" parent="Level/StaticBody3D4" instance=ExtResource("10_c6i3y")]
+transform = Transform3D(10, 0, 0, 0, -5, 0, 0, 0, 10, -15.7988, 5, -12.073)
+
+[node name="wall22" parent="Level/StaticBody3D4" instance=ExtResource("10_c6i3y")]
+transform = Transform3D(10, 0, 0, 0, -5, 0, 0, 0, 10, -6.18668, 5, -12.073)
+
+[node name="wall23" parent="Level/StaticBody3D4" instance=ExtResource("10_c6i3y")]
+transform = Transform3D(10, 0, 0, 0, -5, 0, 0, 0, 10, 3.71651, 5, -12.073)
+
+[node name="wall24" parent="Level/StaticBody3D4" instance=ExtResource("10_c6i3y")]
+transform = Transform3D(10, 0, 0, 0, -5, 0, 0, 0, 10, 13.3961, 5, -12.073)
+
+[node name="wall25" parent="Level/StaticBody3D4" instance=ExtResource("10_c6i3y")]
+transform = Transform3D(10, 0, 0, 0, -5, 0, 0, 0, 10, 23.1315, 5, -12.073)
+
+[node name="wall26" parent="Level/StaticBody3D4" instance=ExtResource("10_c6i3y")]
+transform = Transform3D(10, 0, 0, 0, -5, 0, 0, 0, 10, 23.7834, 5, -12.073)
 
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -273,6 +341,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "Press Space or Enter to retry"
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_c2ibq")
+navigation_layers = 7
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
