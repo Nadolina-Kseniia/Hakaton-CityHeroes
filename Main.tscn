@@ -54,6 +54,7 @@ collision_mask = 0
 shape = SubResource("1")
 
 [node name="MeshInstance" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("2")
 
 [node name="Walls" type="StaticBody3D" parent="."]
@@ -82,7 +83,7 @@ transform = Transform3D(1, 5.96046e-08, -1.42109e-14, 3.82137e-15, -2.18557e-07,
 shape = SubResource("WorldBoundaryShape3D_i5n5q")
 
 [node name="DirectionalLight" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.5, -0.777049, 0.382355, 0, 0.441506, 0.897258, -0.866025, -0.448629, 0.220753, 0, 12.5592, 14.7757)
+transform = Transform3D(0.5, -0.777049, 0.382355, 0, 0.441506, 0.897258, -0.866025, -0.448629, 0.220753, 0, 13, 14.776)
 shadow_enabled = true
 shadow_bias = 0.04
 shadow_blur = 1.5
@@ -99,11 +100,13 @@ environment = SubResource("Environment_0tcge")
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0.183514, 0, 0)
 
 [node name="Camera" type="Camera3D" parent="CameraPivot"]
-transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 9.53674e-07, 19)
+transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 24)
+doppler_tracking = 2
 projection = 1
 fov = 48.6
-size = 24.0
-far = 40.0
+size = 43.463
+near = 0.01
+far = 61.67
 
 [node name="Cylinders" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)

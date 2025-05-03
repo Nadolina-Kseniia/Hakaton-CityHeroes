@@ -26,8 +26,11 @@ MusicPlayer="*res://MusicPlayer.tscn"
 
 [display]
 
+window/size/viewport_width=648
+window/size/viewport_height=1152
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/handheld/orientation=5
 
 [filesystem]
 
