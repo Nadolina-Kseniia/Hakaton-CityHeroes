@@ -37,15 +37,11 @@ func apply_material_to_all_meshes(material: StandardMaterial3D):
 
 func _physics_process(delta):
 	# Управление движением
-	var direction = Vector3.ZERO
-	if Input.is_action_pressed("move_right"):
-		direction.x += 1
-	if Input.is_action_pressed("move_left"):
-		direction.x -= 1
-	if Input.is_action_pressed("move_back"):
-		direction.z += 1
-	if Input.is_action_pressed("move_forward"):
-		direction.z -= 1
+	var direction = Vector3(
+		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
+		0,
+		Input.get_action_strength("move_back") - Input.get_action_strength("move_forward")
+	)
 	
 	is_moving = direction.length() > 0
 	
