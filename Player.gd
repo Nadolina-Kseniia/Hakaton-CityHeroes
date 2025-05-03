@@ -62,7 +62,7 @@ func _physics_process(delta):
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		velocity.y += jump_impulse
 		# Увеличиваем скорость анимации при прыжке
-		animation_player.speed_scale = 8  # Вдвое больше обычного бега
+		animation_player.speed_scale = 3  # Вдвое больше обычного бега
 	
 	# Гравитация
 	velocity.y -= fall_acceleration * delta
@@ -88,7 +88,7 @@ func manage_animations():
 			# Анимация бега
 			if animation_player.current_animation != "chicken_with_animation_2":
 				animation_player.play("chicken_with_animation_2")
-			animation_player.speed_scale = 4  # Нормальная скорость бега
+			animation_player.speed_scale = 1.5  # Нормальная скорость бега
 		else:
 			# Анимация покоя
 			if animation_player.current_animation != "chicken_with_animation_1":
@@ -98,7 +98,7 @@ func manage_animations():
 		# В воздухе - продолжаем анимацию бега с удвоенной скоростью
 		if animation_player.current_animation != "chicken_with_animation_2":
 			animation_player.play("chicken_with_animation_2")
-		animation_player.speed_scale = 8  # Удвоенная скорость
+		animation_player.speed_scale = 3  # Удвоенная скорость
 
 func die():
 	hit.emit()

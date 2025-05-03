@@ -194,6 +194,7 @@ script = ExtResource("1")
 
 [node name="GeneralSkeleton" type="Skeleton3D" parent="."]
 unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 bones/0/name = "Sketchfab_model"
 bones/0/parent = -1
 bones/0/rest = Transform3D(0.0345307, 0, 0, 0, 0, 0.0345307, 0, -0.0345307, 0, 0, 0, 0)
