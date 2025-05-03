@@ -13,24 +13,27 @@ var was_on_floor = true
 
 
 func _ready():
-	var skeleton = $GeneralSkeleton
-	var model = $GeneralSkeleton/Character  # Путь к вашей модели
+	# Загружаем текстуру один раз
+	var texture = load("res://art/player_0.png")
 	
-	# Привязываем модель к скелету
-	if model is Node3D:
-		var mesh_instance = MeshInstance3D.new()
-		mesh_instance.mesh = load("res://path_to_your_mesh.mesh")
-		skeleton.add_child(mesh_instance)
-		mesh_instance.skin = Skin.new()
-		mesh_instance.skeleton = skeleton.get_path()
-		
-		# Настройка материала
-		var material = StandardMaterial3D.new()
-		material.albedo_texture = load("res://textures/player_texture.png")
-		mesh_instance.material_override = material
-		
-		# Удаляем старую модель
-		model.queue_free()
+	# Создаем общий материал
+	var shared_material = StandardMaterial3D.new()
+	shared_material.albedo_texture = texture
+	shared_material.metallic = 0.0
+	shared_material.roughness = 1.0
+	
+	# Применяем к обоим мешам
+	apply_material_to_all_meshes(shared_material)
+
+func apply_material_to_all_meshes(material: StandardMaterial3D):
+	var skeleton = $GeneralSkeleton
+	for child in skeleton.get_children():
+		if child is MeshInstance3D:
+			child.material_override = material
+			# Автоматическая привязка к скелету
+			if child.skin == null:
+				child.skin = Skin.new()
+			child.skeleton = skeleton.get_path()
 
 func _physics_process(delta):
 	# Управление движением

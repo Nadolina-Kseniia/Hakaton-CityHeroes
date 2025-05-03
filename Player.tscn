@@ -560,8 +560,7 @@ mesh = SubResource("ArrayMesh_5ncpa")
 skin = SubResource("Skin_dtqjt")
 
 [node name="Character" parent="GeneralSkeleton" instance=ExtResource("1_4flbx")]
-
-[node name="Pivot" type="Node3D" parent="GeneralSkeleton"]
+visible = false
 
 [node name="CollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.771765, 0)

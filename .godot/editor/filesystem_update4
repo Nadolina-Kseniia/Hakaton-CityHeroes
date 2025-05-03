@@ -1,3 +1,4 @@
-res://Main.tscn
 res://Player.tscn
+res://general_skeleton.gd
+res://Main.tscn
 res://Player.gd
