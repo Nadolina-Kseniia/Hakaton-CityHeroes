@@ -1,4 +1,6 @@
-res://chaser_mob.tscn
 res://Main.tscn
 res://Player.tscn
 res://Mob.tscn
+res://chaser_mob.tscn
+res://Player.gd
+res://Main.gd

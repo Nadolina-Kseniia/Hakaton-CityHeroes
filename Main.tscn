@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://2y3ar4s86yra"]
+[gd_scene load_steps=59 format=4 uid="uid://2y3ar4s86yra"]
 
 [ext_resource type="Script" uid="uid://dn0kiywu3mkq7" path="res://Main.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dw3yuvle8wp6u" path="res://Player.tscn" id="2"]
@@ -15,9 +15,17 @@
 [ext_resource type="PackedScene" uid="uid://cbhtn7eddh8ue" path="res://art/Mini-market/wall-window.glb" id="11_c2ibq"]
 [ext_resource type="PackedScene" uid="uid://cao8m23j5jhj0" path="res://art/Mini-market/wall-door-rotate.glb" id="12_j4qnp"]
 [ext_resource type="PackedScene" uid="uid://s7ldh3dx22r1" path="res://art/Mini-market/wall-corner.glb" id="13_fpfj3"]
+[ext_resource type="PackedScene" uid="uid://7l03rxgvjqwo" path="res://art/KayKit_Restaurant_Bits_1.0_FREE/Assets/gltf/chair_A.gltf" id="13_xrxkg"]
 [ext_resource type="PackedScene" uid="uid://bkv4ulbe66r7" path="res://art/Mini-market/cash-register.glb" id="15_j4qnp"]
 [ext_resource type="Texture2D" uid="uid://bpf3e5sna51mf" path="res://art/low_poly_fast_food_restaurant_v03_1/Texture/booth_full.png" id="16_fpfj3"]
 [ext_resource type="PackedScene" uid="uid://b7ar4sra413d5" path="res://art/low_poly_fast_food_restaurant_v03_1/Mesh/table_rectangle.fbx" id="17_sc1dx"]
+[ext_resource type="PackedScene" uid="uid://c1amqgnmpre25" path="res://art/KayKit_Restaurant_Bits_1.0_FREE/Assets/gltf/stove_multi.gltf" id="19_mxvw5"]
+[ext_resource type="PackedScene" uid="uid://dcxo8wp6y8yvc" path="res://art/KayKit_Restaurant_Bits_1.0_FREE/Assets/gltf/stove_multi_decorated.gltf" id="20_xrxkg"]
+[ext_resource type="PackedScene" uid="uid://ck6d7lhd6y807" path="res://art/KayKit_Restaurant_Bits_1.0_FREE/Assets/gltf/stove_single.gltf" id="21_sqvbp"]
+[ext_resource type="PackedScene" uid="uid://cu5rlm2cmn8hy" path="res://art/KayKit_Restaurant_Bits_1.0_FREE/Assets/gltf/fridge_A.gltf" id="22_hri7i"]
+[ext_resource type="PackedScene" uid="uid://b5dk1okiet3rt" path="res://art/KayKit_Restaurant_Bits_1.0_FREE/Assets/gltf/fridge_B.gltf" id="23_w3rk5"]
+[ext_resource type="PackedScene" uid="uid://ci1e8ddcnj42u" path="res://art/KayKit_Restaurant_Bits_1.0_FREE/Assets/gltf/table_round_A_decorated.gltf" id="24_5mvff"]
+[ext_resource type="PackedScene" uid="uid://c0iwi8wrrifx7" path="res://art/KayKit_Restaurant_Bits_1.0_FREE/Assets/gltf/table_round_A.gltf" id="25_oye8v"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_c2ibq"]
 radius = 0.3
@@ -171,6 +179,20 @@ albedo_texture = ExtResource("10_kjvhd")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bg4s2"]
 size = Vector3(7.42786, 6.33643, 4.11322)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_40n85"]
+size = Vector3(37.4285, 7.7157, 7.6181)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xrxkg"]
+height = 2.03052
+radius = 1.49316
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mxvw5"]
+height = 1.11035
+radius = 1.51514
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sqvbp"]
+size = Vector3(0.822327, 1.8291, 0.876587)
 
 [sub_resource type="BoxShape3D" id="1"]
 size = Vector3(180, 2, 180)
@@ -671,6 +693,144 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3b0ty")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.7745, 2.66821, 56.1314)
 shape = SubResource("BoxShape3D_bg4s2")
 
+[node name="StaticBody3D7" type="StaticBody3D" parent="Level"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.74437, 1.81927, -51.012)
+shape = SubResource("BoxShape3D_40n85")
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="Level"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -17.8406, -1.84774e-06, 19.174)
+
+[node name="table_round_A_decorated2" parent="Level/StaticBody3D9" instance=ExtResource("24_5mvff")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.890503, 0)
+shape = SubResource("CylinderShape3D_xrxkg")
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="Level"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 11.6274, 1.96695e-06, 18.6311)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.444824, 0)
+shape = SubResource("CylinderShape3D_mxvw5")
+
+[node name="table_round_A2" parent="Level/StaticBody3D8" instance=ExtResource("25_oye8v")]
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="Level"]
+transform = Transform3D(-2.26691, 0, -1.96497, 0, 3, 0, 1.96497, 0, -2.26691, -13.9068, 0, 23.4183)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000886917, 0.414551, -0.00653267)
+shape = SubResource("BoxShape3D_sqvbp")
+
+[node name="chair_A2" parent="Level/StaticBody3D10" instance=ExtResource("13_xrxkg")]
+
+[node name="chair_A3" parent="Level/StaticBody3D10" instance=ExtResource("13_xrxkg")]
+transform = Transform3D(-0.805153, 0, 0.593068, 0, 1, 0, -0.593068, 0, -0.805153, -0.78233, 0, 3.25713)
+
+[node name="StaticBody3D11" type="StaticBody3D" parent="Level"]
+transform = Transform3D(-2.26691, 0, -1.96497, 0, 3, 0, 1.96497, 0, -2.26691, 16.0912, 0, 23.9679)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000886917, 0.414551, -0.00653267)
+shape = SubResource("BoxShape3D_sqvbp")
+
+[node name="chair_A2" parent="Level/StaticBody3D11" instance=ExtResource("13_xrxkg")]
+
+[node name="StaticBody3D12" type="StaticBody3D" parent="Level"]
+transform = Transform3D(-1.07765, 0, 2.79976, 0, 3, 0, -2.79976, 0, -1.07765, 5.63813, 0, 20.4814)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000886917, 0.414551, -0.00653267)
+shape = SubResource("BoxShape3D_sqvbp")
+
+[node name="chair_A2" parent="Level/StaticBody3D12" instance=ExtResource("13_xrxkg")]
+
+[node name="StaticBody3D13" type="StaticBody3D" parent="Level"]
+transform = Transform3D(2.64347, 0, 1.41848, 0, 3, 0, -1.41848, 0, 2.64347, 9.8653, 0, 12.4796)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000886917, 0.414551, -0.00653267)
+shape = SubResource("BoxShape3D_sqvbp")
+
+[node name="chair_A2" parent="Level/StaticBody3D13" instance=ExtResource("13_xrxkg")]
+
+[node name="StaticBody3D14" type="StaticBody3D" parent="Level"]
+transform = Transform3D(0.742976, 0, -2.90654, 0, 3, 0, 2.90654, 0, 0.742976, -23.0242, 1.96695e-06, 47.1197)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.444824, 0)
+shape = SubResource("CylinderShape3D_mxvw5")
+
+[node name="table_round_A2" parent="Level/StaticBody3D14" instance=ExtResource("25_oye8v")]
+
+[node name="StaticBody3D15" type="StaticBody3D" parent="Level"]
+transform = Transform3D(-2.46518, 0, 1.70965, 0, 3, 0, -1.70965, 0, -2.46518, -27.0892, 0, 52.7662)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000886917, 0.414551, -0.00653267)
+shape = SubResource("BoxShape3D_sqvbp")
+
+[node name="chair_A2" parent="Level/StaticBody3D15" instance=ExtResource("13_xrxkg")]
+
+[node name="StaticBody3D16" type="StaticBody3D" parent="Level"]
+transform = Transform3D(2.44566, 0, 1.73746, 0, 3, 0, -1.73746, 0, 2.44566, -26.3002, 0, 41.7753)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000886917, 0.414551, -0.00653267)
+shape = SubResource("BoxShape3D_sqvbp")
+
+[node name="chair_A2" parent="Level/StaticBody3D16" instance=ExtResource("13_xrxkg")]
+
+[node name="StaticBody3D17" type="StaticBody3D" parent="Level"]
+transform = Transform3D(2.02897, 0, -2.20981, 0, 3, 0, 2.20981, 0, 2.02897, -17.5007, 0, 43.889)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000886917, 0.414551, -0.00653267)
+shape = SubResource("BoxShape3D_sqvbp")
+
+[node name="chair_A2" parent="Level/StaticBody3D17" instance=ExtResource("13_xrxkg")]
+
+[node name="StaticBody3D18" type="StaticBody3D" parent="Level"]
+transform = Transform3D(0.742976, 0, -2.90654, 0, 3, 0, 2.90654, 0, 0.742976, 21.631, 1.96695e-06, 47.7541)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.444824, 0)
+shape = SubResource("CylinderShape3D_mxvw5")
+
+[node name="table_round_A2" parent="Level/StaticBody3D18" instance=ExtResource("25_oye8v")]
+
+[node name="StaticBody3D19" type="StaticBody3D" parent="Level"]
+transform = Transform3D(-2.46518, 0, 1.70965, 0, 3, 0, -1.70965, 0, -2.46518, 17.566, 0, 53.4005)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000886917, 0.414551, -0.00653267)
+shape = SubResource("BoxShape3D_sqvbp")
+
+[node name="chair_A2" parent="Level/StaticBody3D19" instance=ExtResource("13_xrxkg")]
+
+[node name="StaticBody3D20" type="StaticBody3D" parent="Level"]
+transform = Transform3D(2.44566, 0, 1.73746, 0, 3, 0, -1.73746, 0, 2.44566, 18.355, 0, 42.4096)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000886917, 0.414551, -0.00653267)
+shape = SubResource("BoxShape3D_sqvbp")
+
+[node name="chair_A2" parent="Level/StaticBody3D20" instance=ExtResource("13_xrxkg")]
+
+[node name="StaticBody3D21" type="StaticBody3D" parent="Level"]
+transform = Transform3D(2.02897, 0, -2.20981, 0, 3, 0, 2.20981, 0, 2.02897, 27.1545, 0, 44.5234)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000886917, 0.414551, -0.00653267)
+shape = SubResource("BoxShape3D_sqvbp")
+
+[node name="chair_A2" parent="Level/StaticBody3D21" instance=ExtResource("13_xrxkg")]
+
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 collision_layer = 4
@@ -788,13 +948,15 @@ action_down = "move_back"
 
 [node name="ScoreLabel" type="Label" parent="UserInterface"]
 layout_mode = 0
-offset_left = 16.0
+offset_left = 1.0
 offset_top = 16.0
-offset_right = 77.0
-offset_bottom = 42.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+offset_right = 720.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
 text = "Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("6")
 
 [node name="Retry" type="ColorRect" parent="UserInterface"]
@@ -830,6 +992,24 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -22.4138, 3.75861, -12.5592)
 
 [node name="cash-register3" parent="." instance=ExtResource("15_j4qnp")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -8.14984, 3.75861, -12.5592)
+
+[node name="stove_multi3" parent="." instance=ExtResource("19_mxvw5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.371865, 0, -50.9225)
+
+[node name="stove_multi_decorated2" parent="." instance=ExtResource("20_xrxkg")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -12.2951, 0, -50.8564)
+
+[node name="stove_single2" parent="." instance=ExtResource("21_sqvbp")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -18.2983, 0, -50.9839)
+
+[node name="stove_single3" parent="." instance=ExtResource("21_sqvbp")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 6.28598, 0, -50.9839)
+
+[node name="fridge_A2" parent="." instance=ExtResource("22_hri7i")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 12.5039, 7.7486e-07, -50.8291)
+
+[node name="fridge_B2" parent="." instance=ExtResource("23_w3rk5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -6.19871, 0, -50.8097)
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
