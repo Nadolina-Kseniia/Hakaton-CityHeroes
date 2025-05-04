@@ -1,4 +1,4 @@
-# Squash the Creeps (3D)
+# Chiken Never Fried (3D)
 
 This is a simple game where your character must move and avoid enemies for as long as possible.
 
