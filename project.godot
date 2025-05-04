@@ -10,15 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Squash the Creeps (3D)"
-config/description="In this game, your goal is to chase and kick out the creeps!
+config/name="Chicken Never Fried"
+config/description="In this game, your goal is to avoid those who are hungry!
 
-This is a finished version of the game featured in the \"Your first 3D game\"
-tutorial in the official documentation."
+This is an unfinished version of the game."
 config/tags=PackedStringArray("3d", "demo", "official")
 run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.4")
-config/icon="res://icon.webp"
+config/icon="uid://dmg0e1chw4rcp"
 
 [autoload]
 

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://du14pa8n4mn2r"
+path="res://.godot/imported/stove_single.obj-2e48f0786ec575847c3f853be0ef8a43.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stove_single.obj-2e48f0786ec575847c3f853be0ef8a43.mesh"]
+
+source_file="res://art/KayKit_Restaurant_Bits_1.0_FREE/Assets/obj/stove_single.obj"
+dest_files=["res://.godot/imported/stove_single.obj-2e48f0786ec575847c3f853be0ef8a43.mesh", "res://.godot/imported/stove_single.obj-2e48f0786ec575847c3f853be0ef8a43.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

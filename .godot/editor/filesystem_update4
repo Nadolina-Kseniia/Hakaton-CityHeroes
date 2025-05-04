@@ -1,9 +1,4 @@
-res://Main.tscn
-res://camera.gd
-res://Player.tscn
-res://Player.gd
-res://Main.gd
-res://Mob.tscn
-res://Mob.gd
-res://chaser_mob.gd
 res://chaser_mob.tscn
+res://Main.tscn
+res://Player.tscn
+res://Mob.tscn
