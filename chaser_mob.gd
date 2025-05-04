@@ -55,7 +55,7 @@ func _check_player_collision():
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		if collision.get_collider().is_in_group("player"):
-			# Вызываем стандартный сигнал игрока
-			
-			collision.get_collider().emit_signal("hit")
-			print("Игрок поражен!")
+			var player = collision.get_collider()
+			# Вызываем метод die() у игрока напрямую
+			player.die()
+			print("Игрок поражен чейзером!")

@@ -4,3 +4,5 @@ res://Mob.tscn
 res://chaser_mob.tscn
 res://Player.gd
 res://Main.gd
+res://chaser_mob.gd
+res://Mob.gd

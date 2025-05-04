@@ -101,7 +101,13 @@ func manage_animations():
 		animation_player.speed_scale = 3  # Удвоенная скорость
 
 func die():
-	hit.emit()
+	set_physics_process(false)  # Отключаем управление
+	hide()  # Скрываем модель
+	hit.emit()  # Сигнал для UI
+	# Не вызываем queue_free() сразу, чтобы сработали анимации/эффекты
+	
+	# Отложенное удаление через 0.5 сек
+	await get_tree().create_timer(0.5).timeout
 	queue_free()
 
 func _on_MobDetector_body_entered(_body):
